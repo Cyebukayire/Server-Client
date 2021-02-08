@@ -9,13 +9,13 @@ const server = http.createServer((req,res) => {
 
     //Set header content type 
     // res.setHeader('Content-Type', 'text/plain'); //Ignores html tags
-    res.setHeader('Content-Type', 'text/plain');
+    res.setHeader('Content-Type', 'text/html');
     // res.write('<h1>Ninjas!</h1>');
     // res.write(`<p>Hello, Ninjas!</p>`);
     // res.write(`<p>Hello again, Ninjas!</p>`);
 
     //Send an html file
-    fs.readFile(`./blogs/index.txt`, (err, data) => {
+    fs.readFile("blogs/index.html", (err, data) => {
         if(err) {
             console.log(err);
             res.end();
